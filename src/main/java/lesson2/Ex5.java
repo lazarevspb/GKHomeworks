@@ -21,6 +21,5 @@ public class Ex5 {
                 min = arrInt[i + 1];
             }
         }
-        System.out.println(max + " " + min);//delete
     }
 }

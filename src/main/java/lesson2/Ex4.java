@@ -5,11 +5,9 @@ package lesson2;
 * и с помощью цикла(-ов) заполнить его диагональные элементы единицами;
 * */
 
-import java.util.Arrays;//delete
-
 public class Ex4 {
     public static void main(String[] args) {
-        int[][] arrInt = new int[7][7];  //delete
+        int[][] arrInt = new int[7][7];
 
         for (int i = 0; i <= arrInt[i].length - 1; i++) {
             for (int j = i; j <= arrInt[i].length - 1; j++) {
@@ -33,8 +31,6 @@ public class Ex4 {
             }
         }
 
-        for (int i = 0; i < arrInt.length; i++) {//delete
-            System.out.println(Arrays.toString(arrInt[i])); //delete
-        }
+
     }
 }

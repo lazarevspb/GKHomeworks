@@ -10,7 +10,7 @@ package lesson2;
 public class Ex6 {
     public static void main(String[] args) {
         int[] arrInt = new int[]{0, 1, 1, 0, 2, 1};
-        System.out.println(checkBalance(arrInt));//delete
+        checkBalance(arrInt);
     }
 
     static boolean checkBalance(int[] arrInt) {
@@ -21,8 +21,6 @@ public class Ex6 {
             for (int j = i + 1; j < arrInt.length; j++) {
                 rightSum += arrInt[j];
             }
-            System.out.println("rightSumm: " + rightSum);//delete
-            System.out.println("leftSumm: " + leftSum);//delete
             if (leftSum == rightSum) {
                 return true;
             }
