@@ -8,8 +8,6 @@ package lesson2;
  * */
 
 public class Ex7 {
-
-
     public static void main(String[] args) {
         int[] arrInt = new int[]{0, 1, 2, 3, 4, 5, 6, 7};
         int shiftQuantity = 10;
