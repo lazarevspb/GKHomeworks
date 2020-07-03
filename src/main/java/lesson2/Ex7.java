@@ -26,24 +26,17 @@ public class Ex7 {
                 }
                 arrInt[0] = tmp;
             }
-
-
         }
         if (quantity < 0) {
-
-
-            for (int i = quantity; i < 0 ; i++) {
+            for (int i = quantity; i < 0; i++) {
                 tmp = arrInt[0];
                 for (int j = 0; j < arrInt.length - 1; j++) {
                     arrInt[j] = arrInt[j + 1];
                 }
                 arrInt[arrInt.length - 1] = tmp;
             }
-
         }
     }
-
-
 }
 
 
