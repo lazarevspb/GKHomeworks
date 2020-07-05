@@ -7,16 +7,17 @@ package lesson2;
  * пользоваться вспомогательными массивами.
  * */
 
+
 public class Ex7 {
+
+
     public static void main(String[] args) {
-        int[] arrInt = new int[]{0, 1, 2, 3, 4, 5, 6, 7};
-        int shiftQuantity = 10;
-        arrayShift(arrInt, shiftQuantity);
+        int[] arrInt = new int[]{3, 5, 6, 1};
+        int shiftQuantity = -2;
     }
 
     private static void arrayShift(int[] arrInt, int quantity) {
         int tmp;
-
         if (quantity > -1) {
             for (int i = quantity; i > 0; i--) {
                 tmp = arrInt[arrInt.length - 1];
@@ -26,13 +27,14 @@ public class Ex7 {
                 arrInt[0] = tmp;
             }
         }
-
         if (quantity < 0) {
-            tmp = arrInt[0];
-            for (int j = 0; j < arrInt.length - 1; j++) {
-                arrInt[j] = arrInt[j + 1];
+            for (int i = quantity; i < 0; i++) {
+                tmp = arrInt[0];
+                for (int j = 0; j < arrInt.length - 1; j++) {
+                    arrInt[j] = arrInt[j + 1];
+                }
+                arrInt[arrInt.length - 1] = tmp;
             }
-            arrInt[arrInt.length - 1] = tmp;
         }
     }
 }
