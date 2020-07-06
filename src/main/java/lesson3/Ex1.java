@@ -6,18 +6,17 @@ package lesson3;
  *  После победы или проигрыша выводится запрос – «Повторить игру еще раз? 1 – да / 0 – нет»(1 – повторить, 0 – нет).
  * */
 
-
 import java.util.Random;
 import java.util.Scanner;
 
 public class Ex1 {
     public static void main(String[] args) {
         Random randomInt = new Random();
-        int guessedNumber = randomInt.nextInt(10);
         int enterValueInt;
         int gameEndInt = 1;
 
         while (gameEndInt == 1) {
+            int guessedNumber = randomInt.nextInt(10);
             Scanner scannerInt = new Scanner(System.in);
             int attempts = 1;
             System.out.println("Игра \"Угадай число!\" \nВ вашем распоряжении три попытки.");
@@ -27,7 +26,13 @@ public class Ex1 {
             while (true) {
                 if (enterValueInt == guessedNumber) {
                     System.out.println("Вы угадали, поздравляем!");
-                    return;
+                    gameEndInt = getIntFromScanner(scannerInt, "Повторить игру еще раз? 1 – да / 0 – нет»", -1, 2);
+                    if (gameEndInt == 1) {
+                        break;
+                    } else {
+                        scannerInt.close();
+                        return;
+                    }
                 } else if (attempts < 3) {
                     String youDidNoGuessString = "Вы не угадали - введенное число "+ ((enterValueInt > guessedNumber) ? declensionString[3] : declensionString[2])+
                             " загаданного.\nПопробуйте еще раз.\nУ вас осталось " + (3 - attempts) + " " + ((3 - attempts == 1) ? declensionString[0] : declensionString[1]);

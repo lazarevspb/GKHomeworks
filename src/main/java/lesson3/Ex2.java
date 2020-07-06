@@ -24,9 +24,10 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Ex2 {
+    public static String stringComparisonFinal = "";
+
     public static void main(String[] args) {
         boolean flagWin = false;
-
         String resultString, userAnswer;
         Scanner scannerInputWord = new Scanner(System.in);
         Random guessRandomIntForWord = new Random();
@@ -57,18 +58,30 @@ public class Ex2 {
     private static String comparisonChar(String userAnswer, String guessWordString) {
         String stringComparison = "";
         int iterationLength = Math.min(guessWordString.length(), userAnswer.length());
+
         for (int i = 0; i < iterationLength; i++) {
             if (guessWordString.charAt(i) == userAnswer.charAt(i)) {
                 stringComparison += userAnswer.charAt(i);
             } else {
-                stringComparison += '#';
+                if (stringComparisonFinal.length() > 0 &&  stringComparisonFinal.length() > i ) {
+                        stringComparison += stringComparisonFinal.charAt(i);
+                } else {
+                    stringComparison += '#';
+                }
             }
+        }
+
+        if (stringComparisonFinal.length() != guessWordString.length()) {
+            stringComparisonFinal = stringComparison;
+        }else {
+            stringComparisonFinal = stringComparison;
         }
         for (int i = 0; i < 15 - guessWordString.length(); i++) {
             stringComparison += '#';
         }
         return stringComparison;
     }
+
     public static boolean checkCharInput(String name) {
         return name.matches("[a-zA-Z]+");
     }
