@@ -79,8 +79,10 @@ class Ex1 {
     }
 
     public static void humanTurn() {
+
         int x, y;
         do {
+            System.out.println("Введите координаты в формате X Y: ");
             x = sc.nextInt() - 1;
             y = sc.nextInt() - 1;
         } while ((!validation(x, y)) || (!isEmpty(x, y)));
@@ -94,6 +96,8 @@ class Ex1 {
             y = aiTurnRandom.nextInt(SIZE);
         } while ((!validation(x, y)) || (!isEmpty(x, y)));
         square[x][y] = DOT_O;
+        System.out.println("Компьютер походил в точку " + (x + 1) + " " + (y + 1));
+
     }
 
     public static boolean isEmpty(int x, int y) {
