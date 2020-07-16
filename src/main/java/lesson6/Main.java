@@ -16,19 +16,16 @@ public class Main {
     public static void main(String[] args) {
         Cat cat = new Cat("Барсик", 1.5, 150);
         Cat cat1 = new Cat("Рыжик");
-
         Dog dog = new Dog("Бобик", 0.3, 450);
         Dog dog1 = new Dog("Полкан");
+
         cat1.run(1500);
         dog.run(200);
         cat.run(50);
-//        dog.run(150);
         cat.jump(1.5);
         cat.jump(3);
         dog1.run(100);
         dog1.jump(1);
         dog1.swimming(500);
-//        dog.jump(0.1);
-//        dog.swimming(300);
     }
 }

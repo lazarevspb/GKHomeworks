@@ -6,7 +6,7 @@ public class Cat extends Animal {
     String name;
     double heightJumpLimit;
     int runLengthLimit;
-   
+
 
     public Cat(String name, double heightJumpLimit, int runLengthLimit) {
         this.name = name;
@@ -26,7 +26,7 @@ public class Cat extends Animal {
         if (length <= runLengthLimit && length > 0) {
             System.out.printf("%s: я бегу %d метров\n", name, length);
         } else {
-            System.out.printf("%s: не могу пробежать %d  метров. Максимальная длинна пробежки: %d метров\n", name, length, runLengthLimit);
+            System.out.printf("%s: не могу пробежать %d метров. Максимальная длинна пробежки: %d метров\n", name, length, runLengthLimit);
         }
     }
 

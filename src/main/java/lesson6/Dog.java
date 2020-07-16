@@ -23,7 +23,6 @@ public class Dog extends Animal {
             System.out.printf("%s: я бегу %d метров\n", name, length);
         } else {
             System.out.printf("%s: не могу пробежать %d  метров. Максимальная длинна пробежки: %d метров\n", name, length, runLengthLimit);
-
         }
     }
 
@@ -33,7 +32,6 @@ public class Dog extends Animal {
             System.out.printf("%s: я прыгаю %.1f метров\n", name, jump);
         } else {
             System.out.printf("%s: не могу прыгнуть %.1f метра. Моя максимальная высота прыжка: %.1f метров\n", name, jump, heightJumpLimit);
-
         }
     }
 
@@ -42,7 +40,6 @@ public class Dog extends Animal {
             System.out.printf("%s: я плыву %d метров\n", name, length);
         } else {
             System.out.printf("%s: не могу плыть %d метров", name, length);
-
         }
     }
 }
