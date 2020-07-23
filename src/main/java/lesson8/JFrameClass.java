@@ -30,7 +30,7 @@ public class JFrameClass extends JFrame{
         JPanel flow = new JPanel(new FlowLayout(FlowLayout.RIGHT));
         flow.add(grid);
         Container container = getContentPane();
-        // Размещение панели с кнопками внизу справа
+        // Размещение панели с кнопкой внизу справа
         container.add(flow, BorderLayout.SOUTH);
         setVisible(true);
 
